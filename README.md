@@ -34,7 +34,9 @@ so, the same type to support formators:
 3. `.toml`([nconf-toml](https://www.npmjs.com/package/nconf-toml))
 ...
 
-[![Version npm](https://img.shields.io/npm/v/nconf.svg?style=flat-square)](https://www.npmjs.com/package/nconf)[![npm Downloads](https://img.shields.io/npm/dm/nconf.svg?style=flat-square)](https://www.npmjs.com/package/nconf)[![Build Status](https://img.shields.io/travis/indexzero/nconf/master.svg?style=flat-square)](https://travis-ci.org/indexzero/nconf)[![Coverage](https://img.shields.io/coveralls/indexzero/nconf.svg?style=flat-square)](https://coveralls.io/github/indexzero/nconf)[![Dependencies](https://img.shields.io/david/indexzero/nconf.svg?style=flat-square)](https://david-dm.org/indexzero/nconf)
+[![Version npm](https://img.shields.io/npm/v/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![npm Downloads](https://img.shields.io/npm/dm/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![Build Status](https://img.shields.io/travis/indexzero/nconf-pro/master.svg?style=flat-square)](https://travis-ci.org/indexzero/nconf-pro)[![Coverage](https://img.shields.io/coveralls/indexzero/nconf-pro.svg?style=flat-square)](https://coveralls.io/github/indexzero/nconf-pro)[![Dependencies](https://img.shields.io/david/indexzero/nconf-pro.svg?style=flat-square)](https://david-dm.org/indexzero/nconf-pro)
+
+# Original Usage ↓↓↓
 
 Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging.
 
