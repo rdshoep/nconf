@@ -1,12 +1,16 @@
 .DS_Store
 config.json
 test/fixtures/*.json
+test/fixtures/*.json5
 !test/fixtures/complete.json
 !test/fixtures/malformed.json
 !test/fixtures/bom.json
 !test/fixtures/no-bom.json
 !test/fixtures/secure.json
+!test/fixtures/secure.json5
 node_modules/
 node_modules/*
 npm-debug.log
 coverage
+
+.idea

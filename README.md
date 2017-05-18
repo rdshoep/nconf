@@ -1,4 +1,38 @@
-# nconf
+# nconf-pro
+
+> nconf-pro is the pro-version. support auto detect file extname to use different file formator.
+
+## difference
+1. nconf-pro remove the `ini` formator and import the `json5` formator.
+   many config files need comments to explain the usage, so I add the `json5` default format support
+2. auto detect parse formator by file extname
+
+if you want use `*.ini` config files
+```js
+var ini = require('ini')
+    , nconf = require('nconf');
+
+nconf.formats['ini'] = ini;
+
+//it will load file.ini successful
+nconf.file('/path/to/file.ini');
+
+
+//it also work
+nconf.file('/path/to/file.ini2', {
+    format: ini
+});
+
+//you can also do like this
+nconf.formats['ini2'] = nconf.formats.ini;
+nconf.file('/path/to/file.ini2');
+```
+
+so, the same type to support formators:
+1. `.yaml` or `.yml`([nconf-yaml](https://www.npmjs.com/package/nconf-yaml))
+2. `.js`([nconf-js](https://www.npmjs.com/package/nconf-js))
+3. `.toml`([nconf-toml](https://www.npmjs.com/package/nconf-toml))
+...
 
 [![Version npm](https://img.shields.io/npm/v/nconf.svg?style=flat-square)](https://www.npmjs.com/package/nconf)[![npm Downloads](https://img.shields.io/npm/dm/nconf.svg?style=flat-square)](https://www.npmjs.com/package/nconf)[![Build Status](https://img.shields.io/travis/indexzero/nconf/master.svg?style=flat-square)](https://travis-ci.org/indexzero/nconf)[![Coverage](https://img.shields.io/coveralls/indexzero/nconf.svg?style=flat-square)](https://coveralls.io/github/indexzero/nconf)[![Dependencies](https://img.shields.io/david/indexzero/nconf.svg?style=flat-square)](https://david-dm.org/indexzero/nconf)
 
