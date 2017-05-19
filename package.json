@@ -1,7 +1,7 @@
 {
   "name": "nconf-pro",
   "description": "Hierarchical node.js configuration with files, environment variables, command-line arguments, and atomic object merging.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Rdshoep <rdshoep@gmail.com>",
   "repository": {
     "type": "git",

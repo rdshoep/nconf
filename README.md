@@ -1,3 +1,5 @@
+[![Version npm](https://img.shields.io/npm/v/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![npm Downloads](https://img.shields.io/npm/dm/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![Build Status](https://img.shields.io/travis/indexzero/nconf-pro/master.svg?style=flat-square)](https://travis-ci.org/indexzero/nconf-pro)[![Coverage](https://img.shields.io/coveralls/indexzero/nconf-pro.svg?style=flat-square)](https://coveralls.io/github/indexzero/nconf-pro)[![Dependencies](https://img.shields.io/david/indexzero/nconf-pro.svg?style=flat-square)](https://david-dm.org/indexzero/nconf-pro)
+
 # nconf-pro
 
 > nconf-pro is the pro-version. support auto detect file extname to use different file formator.
@@ -6,11 +8,12 @@
 1. nconf-pro remove the `ini` formator and import the `json5` formator.
    many config files need comments to explain the usage, so I add the `json5` default format support
 2. auto detect parse formator by file extname
+3. you can set custom default formator
 
 if you want use `*.ini` config files
 ```js
-var ini = require('ini')
-    , nconf = require('nconf');
+const ini = require('ini')
+    , nconf = require('nconf-pro');
 
 nconf.formats['ini'] = ini;
 
@@ -34,7 +37,21 @@ so, the same type to support formators:
 3. `.toml`([nconf-toml](https://www.npmjs.com/package/nconf-toml))
 ...
 
-[![Version npm](https://img.shields.io/npm/v/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![npm Downloads](https://img.shields.io/npm/dm/nconf-pro.svg?style=flat-square)](https://www.npmjs.com/package/nconf-pro)[![Build Status](https://img.shields.io/travis/indexzero/nconf-pro/master.svg?style=flat-square)](https://travis-ci.org/indexzero/nconf-pro)[![Coverage](https://img.shields.io/coveralls/indexzero/nconf-pro.svg?style=flat-square)](https://coveralls.io/github/indexzero/nconf-pro)[![Dependencies](https://img.shields.io/david/indexzero/nconf-pro.svg?style=flat-square)](https://david-dm.org/indexzero/nconf-pro)
+if you want set `json5` formator to parse `*.json` files
+```js
+const nconf = require('nconf-pro');
+
+//rewrite json formator to json5
+nconf.formats.json = nconf.formats.json5;
+```
+
+you want set a custom default formator
+```js
+const nconf = require('nconf-pro');
+
+//set a new default formator, if has undefind file type, use the default formator
+nconf.formats.default = { parse: func, stringify: func};
+```
 
 # Original Usage ↓↓↓
 
